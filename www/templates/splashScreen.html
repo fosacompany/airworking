@@ -1,0 +1,22 @@
+<ion-nav-bar class="bar-transparent">    
+    <ion-nav-buttons side="right">                    
+            <button class="button button-clear button-transparent" style="max-width:100px; width:100px; font-weight:bold;">Passer</button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">                
+            <button ng-click="GoBack()" class="button button-transparent button-icon ion-ios-arrow-back" style="max-width:50px; width:50px;"></button>                
+            <button class="button button-transparent" style="background-image: url('img/png/ic_stat_notify.png'); background-size:40px; background-repeat: no-repeat;"></button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+<ion-view view-title="splashScreen">
+    <ion-content style="background: url(img/jpg/splashScreen.jpg) center; background-size: cover;">
+        <div class="hero">            
+        </div>
+        <div class="padding">
+            <h1 style="font-family: Franklin Gothic Heavy;">DES LIEUX DE SEJOUR UNIQUES, CHEZ DES PERSONNES COMME VOUS</h1>
+        </div>        
+        <div class="button-bar social-login">
+            <button ui-sref="app.signup" class="button button-border  button-assertive-900" style="border-style:solid; border-width: 0px; border-right-width: 0px; border-right-color: #d4d7d2;">Inscription</button>
+            <button ui-sref="app.login" class="button button-border  button-assertive-900">Connexion</button>            
+        </div>
+    </ion-content>
+</ion-view>

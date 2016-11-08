@@ -1,0 +1,36 @@
+<ion-nav-bar class="bar-transparent">        
+    <ion-nav-buttons side="left">    
+        <button ng-click="GoBack()" class="button button-clear button-transparent button-icon ion-ios-arrow-back" style=""></button>                              
+        <button class="button button-transparent" style="background-image: url('img/png/ic_stat_notify.png'); background-size:40px; background-repeat: no-repeat; max-height: 44px; min-height: 44px; height: 44px;"></button>                
+    </ion-nav-buttons>   
+    <ion-nav-title> 
+    <div style="font-weight:normal; font-size:18px;">Connexion avec un e-mail</div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">                    
+        <button class="button button-transparent" style="background-image: url('img/png/ic_menu_moreoverflow.png'); background-size:35px; background-repeat: no-repeat; left:20px; top:5px;"></button>                
+    </ion-nav-buttons> 
+</ion-nav-bar>
+<ion-view view-title="Login">
+    <ion-content style="background: url(img/jpg/signin1.jpg) center; background-size: cover;">
+        <div class="log-hero"></div>
+        <div class="padding">
+            <div class = "row">
+               <div class = "col col-70"><h4><a>Mot de passe oublié?</a></h4></div>
+               <div class = "col col-30" style="text-align: right;"><h4><a ui-sref="app.signup">Inscription</a></h4></div>
+            </div>
+            <div class="list ionic-input ink">                
+               <label class="item item-input">
+               <input id="email" type="email" placeholder="Adresse e-mail">
+               </label>
+               <hr class="ionic-hr" />
+               <label class="item item-input">
+               <input id="password" type="password" placeholder="Mot de passe">
+               </label>
+            </div>
+            <button ng-click="login()" class="button button-full button-pink ink">Connexion</button>
+            <script id="templates/loading.html" type="text/ng-template">
+              <ion-spinner icon="bubbles" class="spinner-assertive"></ion-spinner>
+            </script>
+        </div>                
+    </ion-content>
+</ion-view>

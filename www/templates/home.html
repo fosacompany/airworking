@@ -1,0 +1,33 @@
+<ion-nav-bar class="bar-transparent">        
+    <ion-nav-buttons side="left">    
+        <button ng-click="GoBack()" class="button button-clear button-transparent button-icon ion-ios-arrow-back" style=""></button>                              
+        <button class="button button-transparent" style="background-image: url('img/png/ic_stat_notify.png'); background-size:40px; background-repeat: no-repeat; max-height: 44px; min-height: 44px; height: 44px;"></button>                
+    </ion-nav-buttons>   
+    <ion-nav-title> 
+    <div style="font-weight:normal; font-size:18px;">Connexion ou inscription</div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">                    
+        <button class="button button-transparent" style="background-image: url('img/png/ic_menu_moreoverflow.png'); background-size:35px; background-repeat: no-repeat; left:20px; top:5px;"></button>                
+    </ion-nav-buttons>  
+</ion-nav-bar>
+<ion-view view-title="home">
+    <ion-content style="background: url(img/jpg/signin1.jpg) center; background-size: cover;">
+        <div class="hero  no-header flat">                              
+            <div class="content">
+            <img class="logo" src="img/png/title.png">            
+            </div>
+        </div>
+        <div class="padding">
+            <button class="button button-full button-border icon-left ion-social-facebook button-positive ink" style="margin-top: 0px;">Facebook</button>
+            <button class="button button-full button-border icon-left ion-social-googleplus button-assertive ink">Google</button>
+            <div class="button-bar">
+                <button ui-sref="app.signup" class="button button-border button-transparent padding-right">Inscription</button>
+                <button ui-sref="app.login" class="button button-border button-transparent padding-left">Connexion</button>                     
+            </div>
+            <button class="button button-full button-border button-transparent ink">En voir plus</button>
+        </div>       
+        <div class="padding bottom-txt">
+            <div>En m'inscrivant, j'accepte les <span class="pink">Conditions générales</span>, la <span class="pink">Politique de confidentialité</span>, la <span class="pink">Politique de remboursement des voyageurs</span> et les <span class="pink">Conditions de la Garantie Hôte</span> d'Airbnb.</div>
+        </div>             
+    </ion-content>            
+</ion-view>

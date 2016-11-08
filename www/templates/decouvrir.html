@@ -1,0 +1,73 @@
+<ion-nav-bar class="bar bar-border">        
+    <ion-nav-buttons side="left">    
+        <button class="button button-clear button-transparent" style="background-image: url('img/png/ic_drawer.png'); background-size:21px; background-repeat: no-repeat; width: 30px; top:11px;" menu-toggle="left"></button>
+        <button class="button button-transparent" style="background-image: url('img/png/ic_logo.png'); background-size:35px; background-repeat: no-repeat; top:4px; right: 12px;" menu-toggle="left"></button>                
+    </ion-nav-buttons>   
+    <ion-nav-title> 
+    <div style="font-weight:normal; font-size:18px; color:#5b5f60;">Découvrir</div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">                    
+        <button class="button button-transparent" style="background-image: url('img/png/action_search.png'); background-size:35px; background-repeat: no-repeat; left:20px; top:5px; height:20px;"></button>                
+    </ion-nav-buttons> 
+</ion-nav-bar>
+<ion-view view-title="Découvrir">
+    <ion-content>    
+    <div class="ionic-content-top"></div>
+      <ion-item>        
+        <div class="list half">
+            <div class="card card-gallery item item-text-wrap" style="display: table;">
+                <div class="ink dark-bg">                    
+                    <ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="currentIndex" auto-play="true" does-continue="true">
+                      <ion-slide>
+                        <img class="full-image" src="img/jpg/london2.jpg">
+                        <div class="head-content">
+                          <span class="header-announce"><center> Londres </center><br/>
+                            <span class="head-destination"><center>Destination en vogue</center></span>
+                          </span><br/>                          
+                        </div>                 
+                      </ion-slide>
+                      <ion-slide>
+                        <img class="full-image" src="img/jpg/london1.jpg">
+                        <div class="head-content">
+                          <span class="header-announce">Londres</span>
+                        </div>                 
+                      </ion-slide>
+                    </ion-slide-box>                       
+                </div>              
+            </div>           
+            <div class="card card-gallery item item-text-wrap" ng-repeat="item in items">
+                <div class="ink dark-bg">                    
+                    <ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="currentIndex" show-pager="false">
+                      <ion-slide>
+                        <img  ui-sref="app.details-annonce"class="full-image" src="http://riaa123.alwaysdata.net/airworking/ressources/images/{{item.photo}}">
+                      </ion-slide>                      
+                    </ion-slide-box>                    
+                    <span class="avatar avatar-border" style="background-image: url('http://riaa123.alwaysdata.net/airworking/ressources/avatar/{{item.userPhoto}}');"></span>
+                    <span class="heart" style="background-image: url('img/png/heart.png');"></span>
+                    <div class="price2"><center>{{item.prix}} €</center></div>
+                    <div class="annonce-decription">
+                      <div class="decription">{{item.description}}</div>
+                      <div class="place">{{item.lieu}}, {{item.ville}}</div>
+                    </div>
+                </div>              
+            </div>           
+            <!-- <div class="card card-gallery item item-text-wrap" ng-repeat="item in items">
+                <div class="ink dark-bg">                    
+                    <ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="currentIndex" show-pager="false">
+                      <ion-slide>
+                        <img class="full-image" ui-sref="app.details-annonce" src="img/jpg/london2.jpg">
+                      </ion-slide>                      
+                    </ion-slide-box>                    
+                    <span class="avatar avatar-border" style="background-image: url('http://riaa123.alwaysdata.net/airworking/ressources/avatar/{{item.userPhoto}}');"></span>
+                    <span class="heart" style="background-image: url('img/png/heart.png');"></span>
+                    <div class="price"><center>{{item.prix}} €</center></div>
+                    <div class="annonce-decription">
+                      <div class="decription">{{item.description}}</div>
+                      <div class="place">{{item.lieu}}, {{item.ville}}</div>
+                    </div>
+                </div>              
+            </div> -->
+        </div>
+      </ion-item>   
+    </ion-content>
+</ion-view>
